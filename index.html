@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WK SPORTS — Viste tu pasión, supera tus límites</title>
+  <meta name="description" content="WK SPORTS: ropa y uniformes deportivos con diseños exclusivos y personalizados. República Dominicana.">
+  <meta name="theme-color" content="#05070c">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#inicio" class="brand" aria-label="WK SPORTS — inicio">
+      <img src="img/logo.png" alt="WK SPORTS">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#coleccion">Colección</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+        Carrito <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Ropa deportiva · República Dominicana</p>
+      <h1>Viste tu pasión,<br><em>supera tus límites.</em></h1>
+      <p class="hero-text">Diseñamos y fabricamos ropa y uniformes deportivos modernos, cómodos y resistentes. Con tu logo, tus colores y tu estilo.</p>
+      <div class="hero-cta">
+        <a href="#coleccion" class="btn btn-primary">Ver colección</a>
+        <a href="#personalizados" class="btn btn-ghost">Personaliza tu uniforme</a>
+      </div>
+    </div>
+    <ul class="hero-points">
+      <li><strong>Diseño</strong><span>exclusivo</span></li>
+      <li><strong>Calidad</strong><span>y comodidad</span></li>
+      <li><strong>Precios</strong><span>accesibles</span></li>
+    </ul>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>WORK</span><i>/</i><span>KEEP</span><i>/</i><span>WIN</span><i>/</i>
+      <span>UNIFORMES PERSONALIZADOS</span><i>/</i><span>DISEÑO ORIGINAL</span><i>/</i>
+      <span>WORK</span><i>/</i><span>KEEP</span><i>/</i><span>WIN</span><i>/</i>
+      <span>UNIFORMES PERSONALIZADOS</span><i>/</i><span>DISEÑO ORIGINAL</span><i>/</i>
+    </div>
+  </div>
+
+  <!-- LÍNEAS -->
+  <section class="section" id="lineas">
+    <div class="section-head">
+      <p class="eyebrow">Lo que hacemos</p>
+      <h2>Nuestras líneas</h2>
+    </div>
+    <div class="lines">
+      <article class="line-card"><span class="num">01</span><h3>Uniformes deportivos</h3><p>Baloncesto, fútbol y voleibol.</p></article>
+      <article class="line-card"><span class="num">02</span><h3>Ropa deportiva femenina</h3><p>Licras, tops y conjuntos deportivos.</p></article>
+      <article class="line-card"><span class="num">03</span><h3>Conjuntos deportivos</h3><p>Pantalones, chaquetas y sudaderas.</p></article>
+      <article class="line-card"><span class="num">04</span><h3>Ropa de entrenamiento</h3><p>Camisetas y prendas para entrenar.</p></article>
+      <article class="line-card soon"><span class="num">05</span><h3>Medias deportivas</h3><p>Largas y cortas.</p><em>Próximamente</em></article>
+      <article class="line-card soon"><span class="num">06</span><h3>Accesorios deportivos</h3><p>Bolsos, gorras y muñequeras.</p><em>Próximamente</em></article>
+    </div>
+  </section>
+
+  <!-- COLECCIÓN -->
+  <section class="section alt" id="coleccion">
+    <div class="section-head">
+      <p class="eyebrow">Catálogo</p>
+      <h2>La colección</h2>
+    </div>
+    <div class="filters" id="filters">
+      <button class="chip active" data-filter="todo">Todo</button>
+      <button class="chip" data-filter="entrenamiento">Entrenamiento</button>
+      <button class="chip" data-filter="femenino">Femenino</button>
+      <button class="chip" data-filter="conjuntos">Conjuntos</button>
+      <button class="chip" data-filter="uniformes">Uniformes</button>
+      <button class="chip" data-filter="casual">Casual</button>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+
+  <!-- PERSONALIZADOS -->
+  <section class="section" id="personalizados">
+    <div class="section-head">
+      <p class="eyebrow">Valor agregado</p>
+      <h2>Tu equipo, tus colores,<br>tu logo.</h2>
+      <p class="lead">Equipos, clubes, gimnasios y escuelas pueden personalizar sus uniformes con sus propios colores, nombres y logotipos.</p>
+    </div>
+    <div class="custom-grid">
+      <figure class="custom-fig"><img src="img/catalogo-jerseys.jpg" alt="Catálogo de diseños de jerseys WK SPORTS" loading="lazy"><figcaption>+20 diseños de jersey</figcaption></figure>
+      <figure class="custom-fig"><img src="img/catalogo-colores.jpg" alt="Combinaciones de color disponibles" loading="lazy"><figcaption>Combinaciones de color</figcaption></figure>
+    </div>
+    <ol class="steps">
+      <li><b>Diseño</b><span>Modelos, colores y materiales.</span></li>
+      <li><b>Materiales</b><span>Telas resistentes, cómodas y transpirables.</span></li>
+      <li><b>Fabricación</b><span>Corte, costura y confección.</span></li>
+      <li><b>Personalización</b><span>Logos, nombres y diseños especiales.</span></li>
+      <li><b>Control de calidad</b><span>Revisamos cada prenda.</span></li>
+      <li><b>Distribución</b><span>Entrega a tiendas y clientes.</span></li>
+    </ol>
+    <div class="center"><a href="#" class="btn btn-primary" id="quoteBtn">Cotizar uniformes por WhatsApp</a></div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section alt about" id="nosotros">
+    <div class="about-top">
+      <div>
+        <p class="eyebrow">Quiénes somos</p>
+        <h2>Una marca deportiva<br>con identidad propia.</h2>
+      </div>
+      <p>WK SPORTS se dedica al diseño, fabricación y comercialización de ropa y accesorios deportivos. Ofrecemos productos modernos, cómodos, resistentes y de buena calidad para quienes practican deporte o visten ropa deportiva todos los días.</p>
+    </div>
+
+    <div class="mv">
+      <article>
+        <h3>Misión</h3>
+        <p>Ofrecer ropa y accesorios deportivos de excelente calidad, combinando comodidad, estilo, innovación y buenos precios, para satisfacer las necesidades de nuestros clientes y motivarlos a mantener un estilo de vida activo.</p>
+      </article>
+      <article>
+        <h3>Visión</h3>
+        <p>Convertirnos en una marca deportiva reconocida a nivel nacional e internacional, destacándonos por nuestros diseños originales, calidad, atención al cliente y compromiso con el deporte.</p>
+      </article>
+    </div>
+
+    <h3 class="sub">Nuestros valores</h3>
+    <ul class="values">
+      <li>Responsabilidad</li><li>Respeto</li><li>Calidad</li><li>Innovación</li>
+      <li>Disciplina</li><li>Honestidad</li><li>Trabajo en equipo</li>
+    </ul>
+
+    <h3 class="sub">Para quién trabajamos</h3>
+    <ul class="market">
+      <li>Jóvenes y adultos que practican deporte</li>
+      <li>Equipos de baloncesto, fútbol y voleibol</li>
+      <li>Gimnasios y centros deportivos</li>
+      <li>Escuelas y colegios</li>
+      <li>Clubes deportivos</li>
+      <li>Quienes visten ropa deportiva a diario</li>
+    </ul>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="section" id="equipo">
+    <div class="section-head">
+      <p class="eyebrow">Detrás de la marca</p>
+      <h2>Nuestro equipo</h2>
+    </div>
+    <div class="team">
+      <article class="member">
+        <div class="avatar">Q</div>
+        <h3>Quenedy</h3>
+        <span class="role">Fundador y propietario</span>
+        <p>Dirige y administra WK SPORTS con la meta de crear una marca que inspire esfuerzo, disciplina y pasión por el deporte.</p>
+      </article>
+      <article class="member">
+        <div class="avatar">W</div>
+        <h3>Williams</h3>
+        <span class="role">Socio fundador</span>
+        <p>Impulsa el crecimiento de la marca junto a Quenedy, apostando por diseños originales y productos de calidad.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section alt contact" id="contacto">
+    <div class="contact-inner">
+      <div>
+        <p class="eyebrow">Hablemos</p>
+        <h2>Haz tu pedido<br>o cotiza.</h2>
+        <p class="lead">Escríbenos y te respondemos por WhatsApp. Cuéntanos qué necesitas: prendas, uniformes para tu equipo o diseños personalizados.</p>
+        <ul class="contact-list">
+          <li><b>Ubicación</b> República Dominicana</li>
+          <li><b>WhatsApp</b> <a href="#" id="waLink">Escribir ahora</a></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="cName" placeholder="Tu nombre" required>
+        <input type="email" id="cEmail" placeholder="Tu correo" required>
+        <textarea id="cMsg" rows="4" placeholder="Cuéntanos qué necesitas" required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="img/logo.png" alt="WK SPORTS" class="footer-logo">
+    <p class="footer-slogan">Viste tu pasión, supera tus límites.</p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="TikTok">TikTok</a>
+      <a href="#" id="waFooter" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+    <p class="copy">© <span id="year"></span> WK SPORTS. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CARRITO -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Carrito de compras">
+    <div class="cart-head">
+      <h3>Tu carrito</h3>
+      <button id="closeCart" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">RD$0</strong></div>
+      <button class="btn btn-primary btn-block" id="checkout">Pedir por WhatsApp</button>
+      <button class="btn btn-ghost btn-block" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+    <img id="lbImg" alt="">
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
