@@ -2,7 +2,7 @@
    CONFIGURACIÓN — edita esto con los datos reales de WK SPORTS
    ========================================================== */
 const BRAND = "WK SPORTS";
-const WHATSAPP_NUMBER = "18090000000"; // ← Pon tu número con código de país, sin + ni espacios (RD: 1809..., 1829... o 1849...)
+const WHATSAPP_NUMBER = "+1 (809) 355-7957".replace(/\D/g, ""); // ← Pon tu número con código de país, sin + ni espacios (RD: 1809..., 1829... o 1849...)
 const CURRENCY = "RD$";
 
 /* ==========================================================
@@ -12,61 +12,88 @@ const CURRENCY = "RD$";
    ========================================================== */
 const SIZES_U = ["S", "M", "L", "XL", "XXL"];
 const SIZES_F = ["XS", "S", "M", "L", "XL"];
+const SIZES_SHOE = ["38", "39", "40", "41", "42", "43", "44"];
 const NEGRO  = { name: "Negro",  hex: "#0a0a0a" };
 const BLANCO = { name: "Blanco", hex: "#f4f4f4" };
+const AZUL   = { name: "Negro y azul", hex: "linear-gradient(90deg,#0a0a0a 50%,#2563ff 50%)" };
 
 const PRODUCTS = [
+  /* SIN FOTO TODAVÍA — quita los comentarios cuando tengas la imagen:
   { id: 1,  name: "Camiseta WK Classic", category: "casual", price: 850, badge: "NUEVO",
     desc: "Camiseta de corte clásico con el logo WK SPORTS al pecho. Cómoda y versátil.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/tee-negro.jpg" }, { ...BLANCO, img: "img/tee-blanco.jpg" } ] },
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/camiseta-classic-negro.webp" }, { ...BLANCO, img: "img/camiseta-classic-blanco.webp" } ] },
+  { id: 4,  name: "Esqueleto Deportivo Hombre", category: "entrenamiento", price: 1100, badge: "TOP",
+    desc: "Esqueleto de corte atlético con costuras de contraste. Libertad total de movimiento.",
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/esqueleto-hombre-negro.webp" }, { ...BLANCO, img: "img/esqueleto-hombre-blanco.webp" } ] },
+  */
 
   { id: 2,  name: "Polo Oversize WK", category: "casual", price: 1800, badge: "STREETWEAR",
     desc: "Polo oversize en algodón premium 230 gsm con estampado de alta calidad. Estilo callejero.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/polo-negro.jpg", back: "img/polo-negro-espalda.jpg" }, { ...BLANCO, img: "img/polo-blanco.jpg", back: "img/polo-blanco-espalda.jpg" } ] },
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/polo-negro.webp" }, { ...BLANCO, img: "img/polo-blanco.webp" } ] },
 
   { id: 3,  name: "Camiseta Deportiva Pro", category: "entrenamiento", price: 1200, badge: "",
     desc: "Camiseta de entrenamiento con paneles de contraste y tela transpirable.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/sport-negro.jpg" }, { ...BLANCO, img: "img/sport-blanco.jpg" } ] },
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/camiseta-pro-negro.webp" }, { ...BLANCO, img: "img/camiseta-pro-blanco.webp" } ] },
 
-  { id: 4,  name: "Esqueleto Deportivo Hombre", category: "entrenamiento", price: 1100, badge: "TOP",
-    desc: "Esqueleto de corte atlético con costuras de contraste. Libertad total de movimiento.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/tank-hombre.jpg" }, { ...BLANCO, img: "img/tank-blanco.jpg" } ] },
+  { id: 14, name: "Camiseta Manga Larga", category: "entrenamiento", price: 1500, badge: "NUEVO",
+    desc: "Manga larga de entrenamiento con vivos blancos y el logo WK al pecho.",
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/manga-larga-negro.webp" } ] },
+
+  { id: 15, name: "Short Deportivo Hombre", category: "entrenamiento", price: 900, badge: "",
+    desc: "Short ligero de entrenamiento con logo WK. Disponible en negro y blanco.",
+    sizes: SIZES_U, colors: [ { name: "Negro y blanco", hex: "linear-gradient(90deg,#0a0a0a 50%,#f4f4f4 50%)", img: "img/short-hombre.webp" } ] },
 
   { id: 5,  name: "Esqueleto Racerback Mujer", category: "femenino", price: 1000, badge: "",
-    desc: "Esqueleto de espalda deportiva con detalles blancos. Ajuste cómodo para entrenar.",
-    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/tank-mujer.jpg" } ] },
+    desc: "Esqueleto de espalda deportiva con paneles de contraste. Ajuste cómodo para entrenar.",
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/esqueleto-mujer-negro.webp" }, { ...BLANCO, img: "img/esqueleto-mujer-blanco.webp" }, { ...AZUL, img: "img/esqueleto-mujer-azul.webp" } ] },
 
   { id: 6,  name: "Crop Top WK", category: "femenino", price: 750, badge: "",
     desc: "Crop top ajustado con el logo WK SPORTS. Ideal para gym o uso diario.",
-    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/crop-negro.jpg" }, { ...BLANCO, img: "img/crop-blanco.jpg" } ] },
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/crop-negro.webp" }, { ...BLANCO, img: "img/crop-blanco.webp" } ] },
 
   { id: 7,  name: "Short Deportivo Mujer", category: "femenino", price: 950, badge: "NUEVO",
     desc: "Short de tiro alto con paneles laterales de contraste. Cómodo y firme.",
-    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/short-negro.jpg" }, { ...BLANCO, img: "img/short-blanco.jpg" } ] },
-
-  { id: 8,  name: "Conjunto Chaqueta + Pantalón", category: "conjuntos", price: 3800, badge: "CONJUNTO",
-    desc: "Chaqueta con cierre y vivos reflectantes, más pantalón acampanado de tiro alto.",
-    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/conjunto-fem.jpg" } ] },
-
-  { id: 9,  name: "Chaqueta Cortaviento", category: "conjuntos", price: 3200, badge: "",
-    desc: "Chaqueta ligera con capucha, bolsillos con cierre y paneles blancos de contraste.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/cortaviento.jpg" } ] },
-
-  { id: 10, name: "Hoodie Sport", category: "conjuntos", price: 2800, badge: "",
-    desc: "Sudadera con capucha, bolsillo canguro y vivos blancos en las mangas.",
-    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/hoodie.jpg" } ] },
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/short-mujer-negro.webp" }, { ...BLANCO, img: "img/short-mujer-blanco.webp" } ] },
 
   { id: 11, name: "Chaqueta Entallada Mujer", category: "femenino", price: 2200, badge: "",
     desc: "Chaqueta ajustada con cierre, cuello alto y vivos reflectantes. Hecha para moverte.",
-    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/chaqueta-real.jpg" } ] },
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/chaqueta-entallada-negro.webp" } ] },
+
+  { id: 16, name: "Pantalón Acampanado", category: "femenino", price: 1800, badge: "",
+    desc: "Pantalón de tiro alto y corte acampanado. Estiliza y se mueve contigo.",
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/pantalon-acampanado-negro.webp" } ] },
+
+  { id: 8,  name: "Conjunto Chaqueta + Pantalón", category: "conjuntos", price: 3800, badge: "CONJUNTO",
+    desc: "Chaqueta con cierre y vivos reflectantes, más pantalón acampanado de tiro alto.",
+    sizes: SIZES_F, colors: [ { ...NEGRO, img: "img/conjunto-fem-negro.webp" }, { ...BLANCO, img: "img/conjunto-fem-blanco.webp" } ] },
+
+  { id: 9,  name: "Chaqueta Cortaviento", category: "conjuntos", price: 3200, badge: "",
+    desc: "Chaqueta ligera con capucha, bolsillos con cierre y paneles blancos de contraste.",
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/cortaviento-negro.webp" } ] },
+
+  { id: 10, name: "Hoodie Sport", category: "conjuntos", price: 2800, badge: "",
+    desc: "Sudadera con capucha, bolsillo canguro y vivos blancos en las mangas.",
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/hoodie-negro.webp" }, { ...BLANCO, img: "img/hoodie-blanco.webp" } ] },
+
+  { id: 17, name: "Pantalón Jogger", category: "conjuntos", price: 2200, badge: "",
+    desc: "Jogger deportivo con cordón, puños elásticos y franjas laterales de contraste.",
+    sizes: SIZES_U, colors: [ { ...NEGRO, img: "img/jogger-negro.webp" }, { ...BLANCO, img: "img/jogger-blanco.webp" } ] },
 
   { id: 12, name: "Uniforme de Árbitro", category: "uniformes", price: 2500, badge: "",
     desc: "Camisa de rayas con cuello polo y logo en la manga. También en versión personalizada.",
-    sizes: SIZES_U, colors: [ { name: "Rayas", hex: "linear-gradient(90deg,#fff 50%,#000 50%)", img: "img/arbitro.jpg" } ] },
+    sizes: SIZES_U, colors: [ { name: "Rayas", hex: "linear-gradient(90deg,#fff 50%,#000 50%)", img: "img/arbitro.webp" } ] },
 
   { id: 13, name: "Jersey Personalizado", category: "uniformes", price: 1500, badge: "PERSONALIZABLE",
     desc: "Elige entre +20 diseños y combinaciones de color. Agregamos tu logo, nombre y número.",
-    sizes: SIZES_U, colors: [ { name: "A tu gusto", hex: "linear-gradient(90deg,#2563ff 50%,#0a0a0a 50%)", img: "img/catalogo-jerseys.jpg" } ] }
+    sizes: SIZES_U, colors: [ { name: "A tu gusto", hex: "linear-gradient(90deg,#2563ff 50%,#0a0a0a 50%)", img: "img/catalogo-jerseys.webp" } ] },
+
+  { id: 18, name: "Medias Deportivas WK", category: "accesorios", price: 350, badge: "",
+    desc: "Medias deportivas largas con el logo WK. Acolchadas en la planta para mayor comodidad.",
+    sizes: ["Única"], colors: [ { name: "Negro y gris", hex: "linear-gradient(90deg,#0a0a0a 50%,#6b6b6b 50%)", img: "img/medias-negro-gris.webp" }, { ...BLANCO, img: "img/medias-blanco.webp" } ] },
+
+  { id: 19, name: "Zapatillas WK Runner", category: "calzado", price: 4500, badge: "NUEVO",
+    desc: "Zapatillas deportivas ligeras con el logo WK. Pensadas para entrenar y para el día a día.",
+    sizes: SIZES_SHOE, colors: [ { ...NEGRO, img: "img/zapatillas-negro.webp" }, { ...BLANCO, img: "img/zapatillas-blanco.webp" } ] }
 ];
 
 /* ==========================================================
@@ -82,7 +109,7 @@ let cart = [];
 try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { cart = []; }
 const saveCart = () => { try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {} };
 
-const catLabel = { entrenamiento: "Entrenamiento", femenino: "Femenino", conjuntos: "Conjuntos", uniformes: "Uniformes", casual: "Casual" };
+const catLabel = { entrenamiento: "Entrenamiento", femenino: "Femenino", conjuntos: "Conjuntos", uniformes: "Uniformes", casual: "Casual", accesorios: "Accesorios", calzado: "Calzado" };
 const state = {}; // id -> { color, size }
 const getState = p => (state[p.id] ||= { color: 0, size: p.sizes[Math.min(1, p.sizes.length - 1)] });
 
@@ -241,6 +268,7 @@ overlay.addEventListener("click", closeCart);
 const lb = $("#lightbox");
 function openLightbox(src, alt) { $("#lbImg").src = src; $("#lbImg").alt = alt || ""; lb.classList.add("show"); lb.setAttribute("aria-hidden", "false"); }
 function closeLightbox() { lb.classList.remove("show"); lb.setAttribute("aria-hidden", "true"); }
+document.addEventListener("click", e => { const f = e.target.closest(".custom-fig img"); if (f) openLightbox(f.src, f.alt); });
 lb.addEventListener("click", e => { if (e.target !== $("#lbImg")) closeLightbox(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") { closeCart(); closeLightbox(); } });
 

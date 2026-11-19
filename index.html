@@ -92,6 +92,8 @@
       <button class="chip" data-filter="conjuntos">Conjuntos</button>
       <button class="chip" data-filter="uniformes">Uniformes</button>
       <button class="chip" data-filter="casual">Casual</button>
+      <button class="chip" data-filter="accesorios">Accesorios</button>
+      <button class="chip" data-filter="calzado">Calzado</button>
     </div>
     <div class="grid" id="productGrid"></div>
   </section>
@@ -104,8 +106,10 @@
       <p class="lead">Equipos, clubes, gimnasios y escuelas pueden personalizar sus uniformes con sus propios colores, nombres y logotipos.</p>
     </div>
     <div class="custom-grid">
-      <figure class="custom-fig"><img src="img/catalogo-jerseys.jpg" alt="Catálogo de diseños de jerseys WK SPORTS" loading="lazy"><figcaption>+20 diseños de jersey</figcaption></figure>
-      <figure class="custom-fig"><img src="img/catalogo-colores.jpg" alt="Combinaciones de color disponibles" loading="lazy"><figcaption>Combinaciones de color</figcaption></figure>
+      <figure class="custom-fig"><img src="img/catalogo-jerseys.webp" alt="Catálogo de diseños de jerseys WK SPORTS" loading="lazy"><figcaption>+20 diseños de jersey</figcaption></figure>
+      <figure class="custom-fig"><img src="img/catalogo-colores.webp" alt="Combinaciones de color disponibles" loading="lazy"><figcaption>Combinaciones de color</figcaption></figure>
+      <figure class="custom-fig"><img src="img/catalogo-rojo-azul.webp" alt="Uniformes completos en rojo y azul" loading="lazy"><figcaption>Uniformes completos</figcaption></figure>
+      <figure class="custom-fig"><img src="img/catalogo-esqueletos.webp" alt="Esqueletos deportivos en distintos colores" loading="lazy"><figcaption>Esqueletos en todos los colores</figcaption></figure>
     </div>
     <ol class="steps">
       <li><b>Diseño</b><span>Modelos, colores y materiales.</span></li>
@@ -115,7 +119,7 @@
       <li><b>Control de calidad</b><span>Revisamos cada prenda.</span></li>
       <li><b>Distribución</b><span>Entrega a tiendas y clientes.</span></li>
     </ol>
-    <div class="center"><a href="#" class="btn btn-primary" id="quoteBtn">Cotizar uniformes por WhatsApp</a></div>
+    <div class="center"><a href="https://wa.me/18093557957?text=Hola%20WK%20SPORTS%2C%20quiero%20cotizar%20uniformes" target="_blank" rel="noopener" class="btn btn-primary" id="quoteBtn">Cotizar uniformes por WhatsApp</a></div>
   </section>
 
   <!-- NOSOTROS -->
@@ -161,20 +165,51 @@
     <div class="section-head">
       <p class="eyebrow">Detrás de la marca</p>
       <h2>Nuestro equipo</h2>
+      <p class="lead">Las personas que hacen posible WK SPORTS, desde la dirección hasta el diseño, la producción y las ventas.</p>
     </div>
-    <div class="team">
-      <article class="member">
-        <div class="avatar">Q</div>
-        <h3>Quenedy</h3>
-        <span class="role">Fundador y propietario</span>
-        <p>Dirige y administra WK SPORTS con la meta de crear una marca que inspire esfuerzo, disciplina y pasión por el deporte.</p>
-      </article>
-      <article class="member">
-        <div class="avatar">W</div>
-        <h3>Williams</h3>
-        <span class="role">Socio fundador</span>
-        <p>Impulsa el crecimiento de la marca junto a Quenedy, apostando por diseños originales y productos de calidad.</p>
-      </article>
+
+    <!-- ORGANIGRAMA -->
+    <div class="org-scroll">
+      <div class="org" id="organigrama">
+
+        <div class="org-level root">
+          <div class="org-node"><div class="org-card top has-kids">
+            <div class="org-name">Marcos Suriel</div>
+            <div class="org-role">Dueño y director general</div>
+          </div></div>
+        </div>
+
+        <div class="org-level">
+          <div class="org-node"><div class="org-card dir has-kids">
+            <div class="org-name">Williams Morillo</div>
+            <div class="org-role">Socio fundador y director administrativo</div>
+          </div></div>
+          <div class="org-node"><div class="org-card dir has-kids">
+            <div class="org-name">José Manuel Morel</div>
+            <div class="org-role">Gerente de operaciones y producción</div>
+          </div></div>
+        </div>
+
+        <div class="org-level">
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Thama Jeanbaptiste</div><div class="org-role">Formación y modelaje</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Jhosual Rodríguez</div><div class="org-role">Marketing</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Chrisangel López</div><div class="org-role">Informática y tecnología</div></div></div>
+          <div class="org-node"><div class="org-card eq has-kids"><div class="org-name">Jadiel Peña</div><div class="org-role">Marketing y publicidad</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Vianne Pichardo</div><div class="org-role">Diseño</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Yasiel Aquino</div><div class="org-role">Ventas</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Alba Nicole</div><div class="org-role">Ventas y servicio al cliente</div></div></div>
+        </div>
+
+        <div class="org-level">
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Isnoely Tejada</div><div class="org-role">Modelo publicitario</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Hendryx Ferreras</div><div class="org-role">Modelo publicitario</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Junior Brito</div><div class="org-role">Modelo publicitario</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Liarisbel Bravo</div><div class="org-role">Modelo publicitario</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Yerasly Hernández</div><div class="org-role">Modelo publicitario</div></div></div>
+          <div class="org-node"><div class="org-card eq"><div class="org-name">Harol Sosa</div><div class="org-role">Modelo publicitario</div></div></div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -187,7 +222,7 @@
         <p class="lead">Escríbenos y te respondemos por WhatsApp. Cuéntanos qué necesitas: prendas, uniformes para tu equipo o diseños personalizados.</p>
         <ul class="contact-list">
           <li><b>Ubicación</b> República Dominicana</li>
-          <li><b>WhatsApp</b> <a href="#" id="waLink">Escribir ahora</a></li>
+          <li><b>WhatsApp</b> <a href="https://wa.me/18093557957?text=Hola%20WK%20SPORTS%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" id="waLink">Escribir ahora</a></li>
         </ul>
       </div>
       <form class="contact-form" id="contactForm">
@@ -206,7 +241,7 @@
     <div class="socials">
       <a href="#" aria-label="Instagram">Instagram</a>
       <a href="#" aria-label="TikTok">TikTok</a>
-      <a href="#" id="waFooter" aria-label="WhatsApp">WhatsApp</a>
+      <a href="https://wa.me/18093557957" target="_blank" rel="noopener" id="waFooter" aria-label="WhatsApp">WhatsApp</a>
     </div>
     <p class="copy">© <span id="year"></span> WK SPORTS. Todos los derechos reservados.</p>
   </footer>
