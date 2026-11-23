@@ -13,6 +13,7 @@ const CURRENCY = "RD$";
    ========================================================== */
 const SIZES_U = ["S", "M", "L", "XL", "XXL"];
 const SIZES_F = ["XS", "S", "M", "L", "XL"];
+const SIZES_SHOE = ["38", "39", "40", "41", "42", "43", "44"];
 const NEGRO  = { name: "Negro",  hex: "#0a0a0a" };
 const BLANCO = { name: "Blanco", hex: "#f4f4f4" };
 const IMG = n => `img/${n}.webp`; // fotos de diseño (carpeta img)
@@ -318,6 +319,7 @@ overlay.addEventListener("click", closeCart);
 const lb = $("#lightbox");
 function openLightbox(src, alt) { $("#lbImg").src = src; $("#lbImg").alt = alt || ""; lb.classList.add("show"); lb.setAttribute("aria-hidden", "false"); }
 function closeLightbox() { lb.classList.remove("show"); lb.setAttribute("aria-hidden", "true"); }
+document.addEventListener("click", e => { const f = e.target.closest(".custom-fig img"); if (f) openLightbox(f.src, f.alt); });
 lb.addEventListener("click", e => { if (e.target !== $("#lbImg")) closeLightbox(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") { closeCart(); closeLightbox(); } });
 

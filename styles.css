@@ -199,7 +199,7 @@ h2 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 800; font-style: ital
 /* ============ PERSONALIZADOS ============ */
 .custom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2.5rem; }
 .custom-fig { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; }
-.custom-fig img { width: 100%; height: 100%; object-fit: cover; }
+.custom-fig img { width: 100%; aspect-ratio: 3/2; object-fit: contain; display: block; cursor: zoom-in; }
 .custom-fig figcaption {
   position: absolute; left: 1rem; bottom: 1rem; background: rgba(5,7,12,.8); backdrop-filter: blur(6px);
   padding: .35rem 1rem; border-radius: 999px; font-family: var(--font-title); font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
